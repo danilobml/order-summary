@@ -1,6 +1,11 @@
 /* Custom properties */
---
-
+:root {
+--Paleblue: hsl(225, 100%, 94%);
+--Brbightblue: hsl(245, 75%, 52%);
+--Verypblue: hsl(225, 100%, 98%);
+--Desblue: hsl(224, 23%, 55%);
+--Darkblue: hsl(223, 47%, 23%);
+}
 
 /* Set border-box*/
 html{ 
@@ -12,11 +17,167 @@ html{
      box-sizing:inherit;
 }
 
+/* Body */
+body {
+    font-family: "Red Hat Display";
+    font-size: 16px;
+    background-color: var(--Paleblue);
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*Background mobile*/
+main {
+    background-image: url(../images/pattern-background-mobile.svg);
+    width: 100%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*Big container*/
+.container {
+    margin: 1rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    text-align: center;
+    padding-bottom: 0.6rem;
+    width: 85%;
+    height: auto;
+    align-items: center;
+}
+
+/*Image*/
+.img{
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    width:100%;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 1rem;
+}
+
+.text {
+    color: var(--Desblue);
+    padding: 0 1rem;
+    width: 80%;
+}
+
+/*Small box*/
+.box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: 1;
+    background-color: var(--Verypblue);
+    border-radius: 1rem;
+    width: 80%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 0.9rem;
+}
+
+.icon { 
+    padding: 1rem 0;
+    padding-right: 0.2rem;
+}
+
+.plan p {
+    color: var(--Desblue)
+}
+
+.link {
+    margin-left: 1.5rem;
+    font-size:0.9rem;
+    font-weight: bolder;
+}
+
+/*Buttons*/
+.buttons {
+    width:80%;
+    align-self: center;
+    padding:0.9rem;
+    border-radius: 0.7rem;
+    margin: 0.4rem 0;
+    border: none;
+    font-weight: bolder;
+}
+
+.buttons#b1 {
+    background-color: var(--Brbightblue);
+    color: white
+}
+
+.buttons#b2 {
+    background-color: white;
+    color: var(--Desblue);
+}
+
 /* Footer */
 .attribution { 
-    font-size: 11px; text-align: center; 
+    font-size: 11px; 
+    text-align: center; 
 }
     
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+/*Desktop version*/ 
+
+@media screen and (min-width: 376px) {
+    main {
+        background-image: url(../images/pattern-background-desktop.svg);
+    } 
+
+    .container {
+        max-width: 400px;
+    }
+
+    .text {
+        width:88%;
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+        margin-top: 0.2rem;
+    }
+
+    .link {
+        margin-left: 3.7rem;
+    }
+
+    h2{
+        font-size: 1rem;
+    }
+
+    .link:hover {
+        color:rgb(131, 94, 235);
+    }
+
+    .buttons#b1:hover {
+        background-color: rgb(131, 94, 235);
+    }
+
+    .buttons#b2:hover {
+        color: black;
+    }   
 }
